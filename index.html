@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<!--
+╔══════════════════════════════════════════════════════════════════╗
+║   AVINASH THADANI — FFR PORTFOLIO                                ║
+║   Faculty Reflection Portfolio · Georgian College · 2025–2028   ║
+╠══════════════════════════════════════════════════════════════════╣
+║                                                                  ║
+║   SHAREPOINT UPLOAD STRUCTURE                                    ║
+║   Your site: Avinash Thadani - FFR                               ║
+║                                                                  ║
+║   RECOMMENDED: Upload into "Site Assets" library first.          ║
+║   If HTML doesn't render, try "Documents" library instead,       ║
+║   or ask Georgian IT to set browser file handling to             ║
+║   "Permissive" on the Documents library.                         ║
+║                                                                  ║
+║   Site Assets/                   ← or Documents/ — pick one     ║
+║   ├── FFR_Portfolio_Thadani.html ← upload here                   ║
+║   └── files/                     ← create this subfolder         ║
+║       ├── CV_AThadani.docx                                       ║
+║       ├── CV_AThadani.pdf        ← add when ready                ║
+║       └── artifacts/             ← future linked evidence        ║
+║                                                                  ║
+║   After uploading, get the direct URL to FFR_Portfolio_          ║
+║   Thadani.html and share that link with your coach/Dean.         ║
+║   Then paste the full SharePoint URLs for each file in           ║
+║   the CV LINK comment below (search "CV LINK").                  ║
+║                                                                  ║
+║   EDITING GUIDE (using VS Code or Notepad++)                     ║
+║                                                                  ║
+║   To find a section quickly: Ctrl+F (Cmd+F on Mac) and search   ║
+║   for the section ID listed below:                               ║
+║                                                                  ║
+║   #about          → About Me                                     ║
+║   #philosophy     → Teaching Philosophy                          ║
+║   #compass        → My Internal Compass                          ║
+║   #cv             → CV section                                   ║
+║   #competencies   → FRAME / 8 Roles overview                     ║
+║   #journey        → Reflective Practice timeline                 ║
+║     #design-entry       → Designer reflection                    ║
+║     #researcher-entry   → Researcher reflection                  ║
+║     #inclusive-entry    → Inclusive Practitioner reflection      ║
+║     #changemaker-entry  → Changemaker reflection                 ║
+║     #digital-entry      → Digital Explorer reflection            ║
+║     #collaborator-entry → Collaborator reflection                ║
+║     #reflector-entry    → Reflector reflection                   ║
+║     #mentor-entry       → Mentor reflection                      ║
+║   #scholarship    → Scholarship & publications                   ║
+║   #goals          → 3-Year Goal Plan                             ║
+║   #development    → Professional Development                     ║
+║   #edib           → EDIB & Indigenous Ways of Knowing            ║
+║   #ethics-board   → Research Ethics Board (More menu)            ║
+║   #program-dev    → Program Development (More menu)              ║
+║   #curriculum     → Curriculum Design (More menu)                ║
+║   #accreditation  → Accreditation Work (More menu)               ║
+║   #committees     → Committee Work (More menu)                   ║
+║                                                                  ║
+║   TO ADD A REFLECTION:                                           ║
+║   1. Find the section by its ID above                            ║
+║   2. Replace the [bracketed placeholder text] with your content  ║
+║   3. Save the file and refresh your browser to preview           ║
+║                                                                  ║
+║   TO ADD AN ARTIFACT CHIP (linked file):                         ║
+║   Copy this pattern and add inside .artifact-chips:              ║
+║   <a href="files/artifacts/yourfile.pdf"                         ║
+║      class="chip" target="_blank">📄 File Label</a>              ║
+║                                                                  ║
+║   TO CHANGE A STATUS BADGE:                                      ║
+║   Replace class name on the badge span:                          ║
+║   badge-emerging   → Emerging (amber)                            ║
+║   badge-performing → Performing (teal)                           ║
+║   badge-transforming → Transforming (purple)                     ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avinash Thadani | Faculty Reflection Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d2137;
+    --teal: #1a7a6e;
+    --teal-light: #e4f2ef;
+    --teal-mid: #2fa898;
+    --gold: #c8923f;
+    --gold-light: #fdf3e7;
+    --slate: #3b4f61;
+    --mist: #f4f7f9;
+    --white: #ffffff;
+    --text: #1c2b3a;
+    --text-muted: #6b7f8f;
+    --border: rgba(13,33,55,0.1);
+    --radius: 12px;
+    --radius-sm: 6px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.65;
+    font-size: 16px;
+  }
+
+  /* ─── NAV ─────────────────────────────────────────────────── */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(13,33,55,0.97);
+    backdrop-filter: blur(12px);
+    padding: 0 3rem;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--white);
+    letter-spacing: 0.03em;
+  }
+  .nav-brand span { color: var(--teal-mid); }
+  .nav-links {
+    display: flex;
+    gap: 0;
+    list-style: none;
+    align-items: stretch;
+  }
+  .nav-links > li {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .nav-links > li > a,
+  .nav-links > li > .nav-drop-trigger {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    transition: color 0.2s, background 0.2s;
+    padding: 0 0.85rem;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    white-space: nowrap;
+    background: transparent;
+    border: none;
+  }
+  .nav-links > li > a:hover,
+  .nav-links > li > .nav-drop-trigger:hover,
+  .nav-links > li:hover > a,
+  .nav-links > li:hover > .nav-drop-trigger {
+    color: var(--teal-mid);
+    background: rgba(255,255,255,0.05);
+  }
+  .nav-drop-trigger .caret {
+    margin-left: 4px;
+    font-size: 0.6rem;
+    opacity: 0.6;
+    transition: transform 0.2s;
+  }
+  .nav-links > li:hover .caret { transform: rotate(180deg); }
+
+  /* dropdown */
+  .nav-dropdown {
+    display: none;
+    position: absolute;
+    top: 64px;
+    right: 0;
+    background: rgba(13,33,55,0.98);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-top: 2px solid var(--teal-mid);
+    border-radius: 0 0 10px 10px;
+    min-width: 220px;
+    padding: 0.5rem 0;
+    list-style: none;
+    z-index: 200;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+  }
+  .nav-links > li:hover .nav-dropdown { display: block; }
+  .nav-dropdown li a {
+    display: block;
+    padding: 0.6rem 1.25rem;
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    transition: color 0.15s, background 0.15s;
+  }
+  .nav-dropdown li a:hover {
+    color: var(--teal-mid);
+    background: rgba(255,255,255,0.05);
+  }
+  .nav-dropdown li + li {
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+
+  /* ─── HERO ────────────────────────────────────────────────── */
+  .hero {
+    min-height: 100vh;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 0 6rem;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    width: 55%;
+    height: 120%;
+    background: linear-gradient(135deg, #1a4a3a 0%, #0d2137 100%);
+    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .hero-left { padding-top: 3rem; }
+  .hero-eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--teal-mid);
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 1.5px;
+    background: var(--teal-mid);
+  }
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    font-weight: 400;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 0.4rem;
+  }
+  h1 em {
+    font-style: italic;
+    color: #9dd8d0;
+  }
+  .hero-title { margin-bottom: 1.5rem; }
+  .hero-subtitle {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+  }
+  .hero-subtitle strong {
+    color: rgba(255,255,255,0.85);
+    font-weight: 500;
+  }
+  .hero-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.45);
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    line-height: 1.5;
+  }
+  .hero-right {
+    position: relative;
+  }
+  .hero-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 2rem;
+  }
+  .hero-card-title {
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--teal-mid);
+    margin-bottom: 1.25rem;
+  }
+  .ffr-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  .ffr-step:last-child { border-bottom: none; }
+  .step-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--teal);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .step-text {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.4;
+  }
+  .step-text strong {
+    display: block;
+    color: rgba(255,255,255,0.9);
+    font-weight: 500;
+    margin-bottom: 2px;
+    font-size: 0.9rem;
+  }
+
+  /* ─── SECTION LAYOUT ──────────────────────────────────────── */
+  section { padding: 6rem 0; }
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 3rem;
+  }
+  .section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .section-label::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 1.5px;
+    background: var(--teal);
+  }
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: var(--navy);
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+  h2 em { font-style: italic; color: var(--teal); }
+  .section-intro {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 640px;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+  }
+  .alt-bg { background: var(--mist); }
+
+  /* ─── ABOUT ───────────────────────────────────────────────── */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    gap: 5rem;
+    align-items: start;
+  }
+  .about-text p {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    line-height: 1.8;
+  }
+  .credential-list {
+    list-style: none;
+    margin-top: 2rem;
+  }
+  .credential-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+    color: var(--slate);
+  }
+  .credential-list li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--teal);
+    flex-shrink: 0;
+  }
+  .stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .stat-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    text-align: center;
+  }
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+  .stat-label {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  /* ─── COMPETENCY FRAMEWORK (8 roles) ─────────────────────── */
+  .role-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+  .role-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    background: var(--white);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+  }
+  .role-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--role-color, var(--teal));
+  }
+  .role-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(13,33,55,0.1);
+    border-color: var(--role-color, var(--teal));
+  }
+  .role-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    background: var(--role-bg, var(--teal-light));
+    color: var(--role-color, var(--teal));
+  }
+  .role-name {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--navy);
+    margin-bottom: 0.4rem;
+  }
+  .role-desc {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  .role-status {
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .status-badge {
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-weight: 500;
+  }
+  .badge-emerging {
+    background: #fff8ec;
+    color: #b87a1a;
+    border: 1px solid #f5c97a;
+  }
+  .badge-performing {
+    background: #e8f5f2;
+    color: #1a7a6e;
+    border: 1px solid #7fccbf;
+  }
+  .badge-transforming {
+    background: #f0edff;
+    color: #4a3db5;
+    border: 1px solid #b3a8f5;
+  }
+  .badge-placeholder {
+    background: var(--mist);
+    color: var(--text-muted);
+    border: 1px dashed rgba(107,127,143,0.4);
+    font-style: italic;
+  }
+  .add-icon {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1.5px dashed var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+
+  /* ─── JOURNEY / REFLECTION ENTRIES ───────────────────────── */
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: 8px;
+    width: 1.5px;
+    background: linear-gradient(to bottom, var(--teal), var(--border));
+  }
+  .timeline-entry {
+    position: relative;
+    padding-bottom: 3rem;
+  }
+  .timeline-entry:last-child { padding-bottom: 0; }
+  .timeline-dot {
+    position: absolute;
+    left: -2.5rem;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--teal);
+    border: 2.5px solid var(--white);
+    box-shadow: 0 0 0 2px var(--teal);
+  }
+  .entry-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.6rem;
+  }
+  .entry-date {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+  }
+  .entry-role-tag {
+    font-size: 0.7rem;
+    padding: 2px 10px;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+    color: var(--slate);
+  }
+  .entry-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+  }
+  .entry-body {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.75;
+    max-width: 680px;
+  }
+  .entry-body.placeholder {
+    background: var(--mist);
+    border: 1px dashed rgba(107,127,143,0.3);
+    border-radius: var(--radius-sm);
+    padding: 1rem 1.25rem;
+    font-style: italic;
+    color: rgba(107,127,143,0.7);
+  }
+  .artifact-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  .chip {
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    border-radius: 100px;
+    background: var(--teal-light);
+    color: var(--teal);
+    border: 1px solid rgba(26,122,110,0.2);
+    font-weight: 400;
+  }
+  .chip.add {
+    background: transparent;
+    border: 1px dashed rgba(107,127,143,0.4);
+    color: var(--text-muted);
+    cursor: pointer;
+  }
+
+  /* ─── SCHOLARSHIP & RESEARCH ─────────────────────────────── */
+  .pub-list { list-style: none; }
+  .pub-item {
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--white);
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.25rem;
+    align-items: start;
+  }
+  .pub-type {
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: var(--radius-sm);
+    background: var(--gold-light);
+    color: var(--gold);
+    border: 1px solid rgba(200,146,63,0.25);
+    white-space: nowrap;
+    font-weight: 500;
+    margin-top: 3px;
+  }
+  .pub-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 0.3rem;
+    line-height: 1.35;
+  }
+  .pub-citation {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+  .pub-placeholder {
+    border-style: dashed;
+    background: var(--mist);
+  }
+  .pub-placeholder .pub-title {
+    color: var(--text-muted);
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  /* ─── GOALS PLAN ──────────────────────────────────────────── */
+  .goals-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .goal-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+    position: relative;
+  }
+  .goal-card.active {
+    border-left: 4px solid var(--teal);
+  }
+  .goal-card.planned {
+    border-left: 4px dashed rgba(107,127,143,0.4);
+    background: var(--mist);
+  }
+  .goal-year {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  .goal-year.planned { color: var(--text-muted); }
+  .goal-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    color: var(--navy);
+    margin-bottom: 0.6rem;
+    line-height: 1.3;
+  }
+  .goal-title.placeholder {
+    color: var(--text-muted);
+    font-style: italic;
+  }
+  .goal-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+  }
+  .progress-bar {
+    margin-top: 1.25rem;
+    height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: var(--teal);
+    border-radius: 2px;
+    transition: width 0.5s ease;
+  }
+  .progress-label {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.4rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+
+  /* ─── PROFESSIONAL DEV ────────────────────────────────────── */
+  .pd-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+  .pd-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.4rem;
+  }
+  .pd-year {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.4rem;
+  }
+  .pd-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 0.3rem;
+    line-height: 1.35;
+  }
+  .pd-org {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+  .pd-card.add-card {
+    border-style: dashed;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 120px;
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+  }
+  .pd-card.add-card .plus {
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+    opacity: 0.4;
+  }
+
+  /* ─── PERSONAL COMPASS ────────────────────────────────────── */
+  .compass-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .compass-card {
+    border-radius: var(--radius);
+    padding: 2rem;
+    position: relative;
+  }
+  .compass-card.excites { background: #e4f2ef; }
+  .compass-card.worries { background: #fdf3e7; }
+  .compass-card.needs { background: #eef0ff; }
+  .compass-card.growth { background: #f9f0fa; }
+  .compass-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .compass-heading {
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+  }
+  .compass-card.excites .compass-heading { color: var(--teal); }
+  .compass-card.worries .compass-heading { color: var(--gold); }
+  .compass-card.needs .compass-heading { color: #5c52bf; }
+  .compass-card.growth .compass-heading { color: #9c4ab5; }
+  .compass-text {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-style: italic;
+  }
+  .compass-text.placeholder {
+    opacity: 0.6;
+  }
+
+  /* ─── EDIB SECTION ────────────────────────────────────────── */
+  .edib-entry {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+    margin-bottom: 1.25rem;
+  }
+  .edib-entry.placeholder {
+    background: var(--mist);
+    border-style: dashed;
+  }
+  .edib-tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    padding: 3px 10px;
+    border-radius: 100px;
+    background: #eef0ff;
+    color: #5c52bf;
+    border: 1px solid rgba(92,82,191,0.2);
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .edib-title {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+  }
+  .edib-body {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  /* ─── FOOTER ──────────────────────────────────────────────── */
+  footer {
+    background: var(--navy);
+    padding: 3rem;
+    text-align: center;
+  }
+  .footer-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+  }
+  .footer-sub {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 0.08em;
+  }
+  .footer-divider {
+    width: 40px;
+    height: 1.5px;
+    background: var(--teal-mid);
+    margin: 1.25rem auto;
+  }
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    margin-top: 1.5rem;
+  }
+  .footer-links a {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.45);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--teal-mid); }
+
+  /* ─── UTILITY ─────────────────────────────────────────────── */
+  .divider {
+    width: 48px;
+    height: 2px;
+    background: var(--teal);
+    margin: 1.5rem 0 2rem;
+  }
+
+  @media (max-width: 900px) {
+    .hero { padding: 5rem 2rem 3rem; }
+    .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    h1 { font-size: 2.8rem; }
+    .container { padding: 0 1.5rem; }
+    .role-grid { grid-template-columns: repeat(2, 1fr); }
+    .about-grid,
+    .goals-grid,
+    .compass-grid { grid-template-columns: 1fr; }
+    .pd-grid { grid-template-columns: repeat(2, 1fr); }
+    nav { padding: 0 1.5rem; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">Avinash <span>Thadani</span></div>
+  <ul class="nav-links">
+    <li><a href="#about">About Me</a></li>
+    <li><a href="#philosophy">Teaching Philosophy</a></li>
+    <li><a href="#compass">My Internal Compass</a></li>
+    <li><a href="#cv">CV</a></li>
+    <li><a href="#competencies">FRAME</a></li>
+    <li><a href="#journey">Reflective Practice</a></li>
+    <li><a href="#scholarship">Scholarship</a></li>
+    <li><a href="#goals">Goals</a></li>
+    <li><a href="#development">Professional Dev</a></li>
+    <li><a href="#edib">EDIB</a></li>
+    <li>
+      <span class="nav-drop-trigger">More <span class="caret">▾</span></span>
+      <ul class="nav-dropdown">
+        <li><a href="#ethics-board">Research Ethics Board</a></li>
+        <li><a href="#program-dev">Program Development</a></li>
+        <li><a href="#curriculum">Curriculum Design</a></li>
+        <li><a href="#accreditation">Accreditation Work</a></li>
+        <li><a href="#committees">Committee Work</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-grid">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Faculty Reflection Portfolio · Georgian College</div>
+      <div class="hero-title">
+        <h1>Avinash <em>Thadani</em></h1>
+        <h1 style="color: rgba(255,255,255,0.35); font-size: 2rem; margin-top: 0.25rem;">Ph.D.</h1>
+      </div>
+      <p class="hero-subtitle"><strong>Faculty — BScN Nursing Program</strong></p>
+      <p class="hero-subtitle">School of Health, Wellness and Sciences · Georgian College · Since 2011</p>
+      <p class="hero-subtitle" style="margin-top:0.4rem;">Anatomy & Physiology · Pathophysiology · Research Ethics</p>
+      <p class="hero-tagline">"The most practical thing we can achieve in any kind of work is insight into what is happening inside us as we do it." <br>— Parker J. Palmer</p>
+    </div>
+    <div class="hero-right">
+      <div class="hero-card">
+        <div class="hero-card-title">FRAME · FFR Journey Overview</div>
+        <div class="ffr-step">
+          <div class="step-num">1</div>
+          <div class="step-text">
+            <strong>FFR Kickoff</strong>
+            Attended the FRAME Kick-Off session with Faculty Developers — commencing the three-year reflection cycle.
+          </div>
+        </div>
+        <div class="ffr-step">
+          <div class="step-num">2</div>
+          <div class="step-text">
+            <strong>Coach & Work Time</strong>
+            Connected with faculty development coach; building this portfolio and goal plan.
+          </div>
+        </div>
+        <div class="ffr-step">
+          <div class="step-num">3</div>
+          <div class="step-text">
+            <strong>Community of Practice</strong>
+            Connecting with peers through CoP sessions and peer reflection.
+          </div>
+        </div>
+        <div class="ffr-step">
+          <div class="step-num">4</div>
+          <div class="step-text">
+            <strong>Submit & Discuss</strong>
+            Portfolio and goal plan submitted; discussion with Associate Dean / Dean.
+          </div>
+        </div>
+        <div class="ffr-step">
+          <div class="step-num">5</div>
+          <div class="step-text">
+            <strong>Maintain & Repeat</strong>
+            Maintained over three years; repeated after the cycle.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-label">About Me</div>
+    <h2>My Teaching <em>Journey</em></h2>
+    <div class="divider"></div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I am a full-time faculty member in the Honours Bachelor of Science in Nursing (BScN) program at Georgian College, where I have taught since 2011. My teaching focuses on the biomedical sciences foundational to nursing practice (e.g., Anatomy &amp; Physiology, Pathophysiology) — courses I have both taught and substantially developed from the ground up using open educational resources.</p>
+        <p>My academic background spans medicinal chemistry (Ph.D., University of Toronto, 2001), post-doctoral research at the University of Chicago, and 5+ years of faculty and research experience at the University of Windsor before joining Georgian. I hold five American patents, published more than 20 peer-reviewed scientific articles (including in prestigious journals such as <em>Nature</em>), and have served as Chair of Georgian College's Research Ethics Board since 2023.</p>
+        <p>As I enter the FRAME process, I find myself reflecting on a teaching career defined by continual growth, adaptation, and reinvention — from academic researcher to nursing science educator. This reflective process offers me an opportunity to look more intentionally at how my experiences, values, and teaching practices have evolved over time. I remain deeply committed to strengthening my reflective practice in ways that support student success, enrich the learning experience, and contribute meaningfully to program excellence.</p>
+        <ul class="credential-list">
+          <li>Ph.D. Chemistry — University of Toronto (2001)</li>
+          <li>M.Sc. Chemistry — University of Toronto (1998)</li>
+          <li>B.Sc. (Hons.) Biochemistry — University of Toronto (1996)</li>
+          <li>Chair, Georgian College Research Ethics Board (2023–present)</li>
+          <li>VR Educator Micro-credential — Georgian College (2021)</li>
+          <li>Curator & Technologist Micro-credentials — Ontario Extend (2020)</li>
+          <li>Keystones of Healthcare Simulation — SIM-one (2017)</li>
+        </ul>
+      </div>
+      <div>
+        <div class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-number">14+</div>
+            <div class="stat-label">Years at Georgian</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">5</div>
+            <div class="stat-label">US Patents</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">20+</div>
+            <div class="stat-label">Peer-Reviewed Articles</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">20+</div>
+            <div class="stat-label">Years Teaching</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEACHING PHILOSOPHY -->
+<section id="philosophy" class="alt-bg">
+  <div class="container">
+    <div class="section-label">Teaching Philosophy</div>
+    <h2>My Teaching <em>Philosophy</em></h2>
+    <div class="divider"></div>
+    <div style="max-width: 760px;">
+
+      <!-- Short version -->
+      <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 2.5rem; margin-bottom: 1.25rem;">
+        <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.85; margin-bottom: 1.1rem;">My teaching philosophy is grounded in care, connection, and student-centred learning. As a professor in a baccalaureate nursing program, I see teaching as both an academic and relational responsibility. I care deeply about my students, want them to succeed, and strive to do everything within my power to support their growth as novice learners and future registered nurses.</p>
+        <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.85; margin-bottom: 1.1rem;">Although I am an introvert by nature, I find great energy and purpose in the classroom. I aim to create a warm, welcoming, and respectful learning environment where students feel seen, supported, and challenged. I believe students learn best when they are actively engaged, so I use case-based learning, discussion, problem-solving, and peer-to-peer collaboration to help them connect theory to nursing practice.</p>
+        <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.85; margin-bottom: 1.1rem;">I also believe motivation is one of the most important predictors of student success. At the same time, I recognize that first-year students are still learning how to take responsibility for their own learning journey. My role is to guide them toward confidence, independence, and professional accountability.</p>
+        <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.85; margin-bottom: 0;">As John Dewey is often paraphrased, <em>"We do not learn from experience; we learn from reflecting on experience."</em> This belief shapes my own teaching practice. I continually reflect, adapt, and incorporate useful technologies, including VR and AI tools, to enrich learning and prepare students for contemporary nursing practice.</p>
+      </div>
+
+      <!-- Expand / collapse longer version -->
+      <div>
+        <button onclick="togglePhilosophy()" id="phil-toggle-btn"
+          style="display: inline-flex; align-items: center; gap: 0.5rem; background: transparent; border: 1px solid var(--teal); color: var(--teal); padding: 0.55rem 1.1rem; border-radius: 100px; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.04em; cursor: pointer; transition: all 0.2s; font-family: 'DM Sans', sans-serif;">
+          <span id="phil-toggle-icon" style="font-size: 0.7rem; transition: transform 0.25s;">▶</span>
+          Read full teaching philosophy
+        </button>
+
+        <div id="phil-extended" style="display: none; overflow: hidden;">
+          <div style="background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--teal); border-radius: 0 0 var(--radius) var(--radius); padding: 2.5rem; margin-top: 0.5rem;">
+
+            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.85; margin-bottom: 1.1rem;">My teaching philosophy is grounded in care, connection, reflection, and student-centred learning. As a professor in a baccalaureate nursing program at a mid-sized college, I see teaching as more than the delivery of course content. It is a relational, developmental, and professional responsibility. I care deeply about my students, want them to succeed, and strive to do everything within my power to support their academic growth, confidence, and emerging professional identity as future registered nurses.</p>
+
+            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.85; margin-bottom: 1.1rem;">I approach the classroom with warmth, kindness, and respect. Although I am an introvert by nature, I love being in the classroom because it allows me to connect with students in meaningful ways. I believe that students learn best when they feel psychologically safe, valued, and encouraged to participate. For this reason, I work intentionally to create a welcoming learning environment where students can ask questions, make mistakes, think critically, and gradually build confidence as novice learners.</p>
+
+            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.85; margin-bottom: 1.1rem;">Because I primarily teach first-year students, I am mindful that many are still developing the habits, discipline, and self-awareness required for success in higher education and in nursing. I believe student motivation is one of the most important criteria for success. However, I also believe that personal responsibility for learning must be learned over time. My role is to support students while also helping them develop accountability, independence, and resilience. I aim to meet students where they are, while guiding them toward the professional expectations of nursing education and practice.</p>
+
+            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.85; margin-bottom: 1.1rem;">My teaching is strongly rooted in active learning and case-based problem solving. Nursing students need more than factual knowledge; they need to apply concepts, interpret clinical information, make judgments, and communicate their reasoning. I use case studies, classroom discussion, group activities, and applied problem-solving to help students connect foundational knowledge to real-world nursing situations. These strategies encourage students to move from passive reception of information to active engagement with ideas, evidence, and practice-based thinking.</p>
+
+            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.85; margin-bottom: 1.1rem;">I also value peer-to-peer learning and the development of a classroom community. Students often learn deeply when they explain concepts to one another, compare reasoning, and work through uncertainty together. By building a community of learning, I hope to help students see themselves not only as individual learners, but also as members of a collaborative profession. Nursing is inherently relational and team-based, and the classroom should reflect those values.</p>
+
+            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.85; margin-bottom: 1.1rem;">Reflection is central to my identity as an educator. As John Dewey is often paraphrased, <em>"We do not learn from experience; we learn from reflecting on experience."</em> I continually reflect on what is working, what is not working, and how my teaching can better support student learning. This reflective practice allows me to adapt my methods, respond to student needs, and remain open to growth as an instructor.</p>
+
+            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.85; margin-bottom: 1.1rem;">Finally, I am a strong supporter of thoughtful educational technology. As a technophile, I am interested in tools such as virtual reality, simulation, AI chatbots, and other digital resources that can enrich student learning. However, I believe technology should be used purposefully, not simply for novelty. When used well, technology can increase engagement, support practice, provide immediate feedback, and help students visualize complex concepts. My goal is to integrate technology in ways that strengthen learning, deepen understanding, and prepare students for the evolving realities of contemporary nursing practice.</p>
+
+            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.85; margin-bottom: 0;">Overall, my teaching philosophy is rooted in the belief that students flourish when they are supported, challenged, actively engaged, and encouraged to reflect on their learning. I aim to be a warm, student-centred, and reflective educator who helps first-year nursing students develop the knowledge, confidence, motivation, and responsibility they need to succeed in their academic journey and future professional practice.</p>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+function togglePhilosophy() {
+  var panel = document.getElementById('phil-extended');
+  var icon  = document.getElementById('phil-toggle-icon');
+  var btn   = document.getElementById('phil-toggle-btn');
+  if (panel.style.display === 'none') {
+    panel.style.display = 'block';
+    icon.style.transform = 'rotate(90deg)';
+    btn.textContent = '';
+    btn.insertAdjacentHTML('afterbegin', '<span id="phil-toggle-icon" style="font-size:0.7rem; transition:transform 0.25s; transform:rotate(90deg); display:inline-block;">▶</span> Collapse full teaching philosophy');
+  } else {
+    panel.style.display = 'none';
+    icon.style.transform = 'rotate(0deg)';
+    btn.textContent = '';
+    btn.insertAdjacentHTML('afterbegin', '<span id="phil-toggle-icon" style="font-size:0.7rem; transition:transform 0.25s; display:inline-block;">▶</span> Read full teaching philosophy');
+  }
+}
+</script>
+
+<!-- PERSONAL COMPASS -->
+<section id="compass">
+  <div class="container">
+    <div class="section-label">Personal Compass</div>
+    <h2>What <em>Guides Me</em></h2>
+    <p class="section-intro">The Personal Compass is a reflective tool for understanding the values, tensions, needs, and aspirations that orient your teaching journey. Complete each quadrant with honesty.</p>
+    <div class="compass-grid">
+
+      <div class="compass-card excites">
+        <div class="compass-icon">✨</div>
+        <div class="compass-heading">What Excites Me</div>
+        <div class="compass-text placeholder">[What energizes you as a nursing faculty member? What moments in the classroom or curriculum make you feel most alive as an educator? Consider: watching students make connections between physiology and clinical practice; the puzzle-solving of course design; interdisciplinary collaboration with nursing colleagues; the frontier of VR and digital learning tools.]</div>
+      </div>
+
+      <div class="compass-card worries">
+        <div class="compass-icon">⚡</div>
+        <div class="compass-heading">What Concerns Me</div>
+        <div class="compass-text placeholder">[What challenges or tensions keep you up at night? What aspects of your teaching practice feel unresolved? Consider: ensuring equity and access in technology-mediated learning; balancing research demands with teaching preparation; navigating the pace of NCLEX changes and their implications for nursing science education.]</div>
+      </div>
+
+      <div class="compass-card needs">
+        <div class="compass-icon">🧭</div>
+        <div class="compass-heading">What I Need</div>
+        <div class="compass-text placeholder">[What resources, support, or conditions help you thrive? What do you need from your institution, colleagues, or students to do your best work? Consider: peer feedback on new course designs; collaborative spaces for interdisciplinary conversation; time dedicated to scholarship; recognition of curriculum development as a form of faculty scholarship.]</div>
+      </div>
+
+      <div class="compass-card growth">
+        <div class="compass-icon">🌿</div>
+        <div class="compass-heading">My Growth Aspirations</div>
+        <div class="compass-text placeholder">[Where do you aspire to be in three years? What kind of educator, researcher, and colleague do you want to become? Consider: deepening your SoTL practice; becoming a recognized voice in VR-based nursing education; expanding your role in program-level curriculum leadership; growing as a mentor to new nursing faculty.]</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CV -->
+<section id="cv" class="alt-bg">
+  <div class="container">
+    <div class="section-label">Curriculum Vitae</div>
+    <h2>Academic <em>Profile</em></h2>
+    <div class="divider"></div>
+    <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 2.5rem; flex-wrap: wrap;">
+      <!--
+        CV LINK — TWO OPTIONS depending on where you upload files in SharePoint:
+        Option A (Site Assets library — recommended first try):
+          href="files/CV_AThadani.docx"   ← works if HTML is in Site Assets/
+        Option B (paste full SharePoint URL after uploading):
+          href="https://georgiancollege.sharepoint.com/sites/AvinashThadani-FFR/Shared%20Documents/files/CV_AThadani.docx"
+        Update the href below once you confirm which library works for you.
+      -->
+      <a href="files/CV_AThadani.docx" download
+         style="display: inline-flex; align-items: center; gap: 0.5rem; background: var(--navy); color: white; text-decoration: none; padding: 0.6rem 1.25rem; border-radius: var(--radius-sm); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.04em; transition: background 0.2s;">
+        ⬇ Download Full CV (Word)
+      </a>
+      <a href="files/CV_AThadani.pdf" download
+         style="display: inline-flex; align-items: center; gap: 0.5rem; background: transparent; color: var(--teal); text-decoration: none; padding: 0.6rem 1.25rem; border-radius: var(--radius-sm); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.04em; border: 1px solid var(--teal); transition: all 0.2s; opacity: 0.45; cursor: not-allowed;" title="PDF version coming soon">
+        ⬇ Download Full CV (PDF) — coming soon
+      </a>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+
+      <div>
+        <h3 style="font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin-bottom: 1rem; font-weight: 500;">Education</h3>
+        <div style="border-left: 2px solid var(--border); padding-left: 1.25rem;">
+          <div style="margin-bottom: 1.25rem;">
+            <div style="font-weight: 500; font-size: 0.92rem; color: var(--navy);">Doctor of Philosophy — Chemistry</div>
+            <div style="font-size: 0.82rem; color: var(--text-muted);">University of Toronto · 2001</div>
+          </div>
+          <div style="margin-bottom: 1.25rem;">
+            <div style="font-weight: 500; font-size: 0.92rem; color: var(--navy);">Master of Science — Chemistry</div>
+            <div style="font-size: 0.82rem; color: var(--text-muted);">University of Toronto · 1998</div>
+          </div>
+          <div>
+            <div style="font-weight: 500; font-size: 0.92rem; color: var(--navy);">B.Sc. (Hons.) — Biochemistry</div>
+            <div style="font-size: 0.82rem; color: var(--text-muted);">University of Toronto · 1996</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 style="font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin-bottom: 1rem; font-weight: 500;">Academic Appointments</h3>
+        <div style="border-left: 2px solid var(--border); padding-left: 1.25rem;">
+          <div style="margin-bottom: 1.25rem;">
+            <div style="font-weight: 500; font-size: 0.92rem; color: var(--navy);">Faculty — BScN Nursing Program</div>
+            <div style="font-size: 0.82rem; color: var(--text-muted);">Georgian College · Dec 2011 – Present</div>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem;">School of Health, Wellness and Sciences</div>
+          </div>
+          <div style="margin-bottom: 1.25rem;">
+            <div style="font-weight: 500; font-size: 0.92rem; color: var(--navy);">Assistant Professor — Chemistry &amp; Biochemistry</div>
+            <div style="font-size: 0.82rem; color: var(--text-muted);">University of Windsor · 2004 – 2011</div>
+          </div>
+          <div>
+            <div style="font-weight: 500; font-size: 0.92rem; color: var(--navy);">NSERC Post-Doctoral Fellow</div>
+            <div style="font-size: 0.82rem; color: var(--text-muted);">University of Chicago · 2001 – 2004</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 style="font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin-bottom: 1rem; font-weight: 500;">Current Teaching — Georgian College</h3>
+        <ul style="list-style: none; border-left: 2px solid var(--border); padding-left: 1.25rem;">
+          <li style="padding: 0.45rem 0; border-bottom: 1px solid var(--border); font-size: 0.88rem; color: var(--slate);"><span style="font-weight:500; color:var(--navy);">NURS 1016</span> — Anatomy &amp; Physiology 1</li>
+          <li style="padding: 0.45rem 0; border-bottom: 1px solid var(--border); font-size: 0.88rem; color: var(--slate);"><span style="font-weight:500; color:var(--navy);">NURS 1020</span> — Anatomy &amp; Physiology 2</li>
+          <li style="padding: 0.45rem 0; border-bottom: 1px solid var(--border); font-size: 0.88rem; color: var(--slate);"><span style="font-weight:500; color:var(--navy);">NURS 1017</span> — Pathophysiology 1</li>
+          <li style="padding: 0.45rem 0; font-size: 0.88rem; color: var(--slate);"><span style="font-weight:500; color:var(--navy);">NURS 1021</span> — Pathophysiology 2</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 style="font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin-bottom: 1rem; font-weight: 500;">Selected Highlights</h3>
+        <div style="border-left: 2px solid var(--border); padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.9rem;">
+          <div>
+            <div style="font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--teal); font-weight: 500; margin-bottom: 2px;">Research</div>
+            <div style="font-size: 0.85rem; color: var(--slate);">Co-Investigator, Future Skills Canada VR Grant (2021–2023); publication in <em>Canadian Journal of Learning and Technology</em> (2025)</div>
+          </div>
+          <div>
+            <div style="font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); font-weight: 500; margin-bottom: 2px;">Intellectual Property</div>
+            <div style="font-size: 0.85rem; color: var(--slate);">5 US Patents in organic and pharmaceutical chemistry (2006–2014)</div>
+          </div>
+          <div>
+            <div style="font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; color: #5c52bf; font-weight: 500; margin-bottom: 2px;">Service</div>
+            <div style="font-size: 0.85rem; color: var(--slate);">Chair, Georgian College Research Ethics Board (2023–present)</div>
+          </div>
+          <div>
+            <div style="font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; color: #3b6d11; font-weight: 500; margin-bottom: 2px;">Memberships</div>
+            <div style="font-size: 0.85rem; color: var(--slate);">Canadian Society of Chemistry · American Chemical Society</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COMPETENCY FRAMEWORK -->
+<section id="competencies">
+  <div class="container">
+    <div class="section-label">Faculty Competency Framework</div>
+    <h2>Eight Roles, <em>One Journey</em></h2>
+    <p class="section-intro">The Georgian College Faculty Competency Framework identifies eight core roles that educators embody. Below I map where I see myself — emerging, performing, or transforming — in each role, and link my reflective entries.</p>
+    <div class="role-grid">
+      <!-- Design -->
+      <div class="role-card" style="--role-color: #1a7a6e; --role-bg: #e4f2ef;" onclick="document.getElementById('design-entry').scrollIntoView({behavior:'smooth'})">
+        <div class="role-icon">✏️</div>
+        <div class="role-name">Designer</div>
+        <div class="role-desc">Courses, classes, teaching &amp; learning activities, and assessments.</div>
+        <div class="role-status">
+          <span class="status-badge badge-performing">Performing</span>
+          <span class="add-icon">→</span>
+        </div>
+      </div>
+      <!-- Researcher -->
+      <div class="role-card" style="--role-color: #c8923f; --role-bg: #fdf3e7;" onclick="document.getElementById('researcher-entry').scrollIntoView({behavior:'smooth'})">
+        <div class="role-icon">🔬</div>
+        <div class="role-name">Researcher</div>
+        <div class="role-desc">Engaging in research to inform teaching and learning practices.</div>
+        <div class="role-status">
+          <span class="status-badge badge-performing">Performing</span>
+          <span class="add-icon">→</span>
+        </div>
+      </div>
+      <!-- Inclusive Practitioner -->
+      <div class="role-card" style="--role-color: #5c52bf; --role-bg: #eef0ff;" onclick="document.getElementById('inclusive-entry').scrollIntoView({behavior:'smooth'})">
+        <div class="role-icon">🤝</div>
+        <div class="role-name">Inclusive Practitioner</div>
+        <div class="role-desc">Exploring and embracing inclusive teaching practices.</div>
+        <div class="role-status">
+          <span class="status-badge badge-placeholder">Add reflection</span>
+          <span class="add-icon">+</span>
+        </div>
+      </div>
+      <!-- Changemaker -->
+      <div class="role-card" style="--role-color: #a03860; --role-bg: #fce9f0;" onclick="document.getElementById('changemaker-entry').scrollIntoView({behavior:'smooth'})">
+        <div class="role-icon">🌱</div>
+        <div class="role-name">Changemaker</div>
+        <div class="role-desc">Driving positive change within the educational environment.</div>
+        <div class="role-status">
+          <span class="status-badge badge-emerging">Emerging</span>
+          <span class="add-icon">→</span>
+        </div>
+      </div>
+      <!-- Digital Explorer -->
+      <div class="role-card" style="--role-color: #185fa5; --role-bg: #e6f1fb;" onclick="document.getElementById('digital-entry').scrollIntoView({behavior:'smooth'})">
+        <div class="role-icon">💻</div>
+        <div class="role-name">Digital Explorer</div>
+        <div class="role-desc">Innovating with digital solutions in teaching and learning.</div>
+        <div class="role-status">
+          <span class="status-badge badge-transforming">Transforming</span>
+          <span class="add-icon">→</span>
+        </div>
+      </div>
+      <!-- Collaborator -->
+      <div class="role-card" style="--role-color: #3b6d11; --role-bg: #eaf3de;" onclick="document.getElementById('collaborator-entry').scrollIntoView({behavior:'smooth'})">
+        <div class="role-icon">👥</div>
+        <div class="role-name">Collaborator</div>
+        <div class="role-desc">Working effectively with others to enhance the learning experience.</div>
+        <div class="role-status">
+          <span class="status-badge badge-performing">Performing</span>
+          <span class="add-icon">→</span>
+        </div>
+      </div>
+      <!-- Reflector -->
+      <div class="role-card" style="--role-color: #1a7a6e; --role-bg: #e4f2ef;" onclick="document.getElementById('reflector-entry').scrollIntoView({behavior:'smooth'})">
+        <div class="role-icon">🪞</div>
+        <div class="role-name">Reflector</div>
+        <div class="role-desc">Integrating feedback to continuously improve teaching practices.</div>
+        <div class="role-status">
+          <span class="status-badge badge-placeholder">Add reflection</span>
+          <span class="add-icon">+</span>
+        </div>
+      </div>
+      <!-- Mentor -->
+      <div class="role-card" style="--role-color: #854f0b; --role-bg: #faeeda;" onclick="document.getElementById('mentor-entry').scrollIntoView({behavior:'smooth'})">
+        <div class="role-icon">⭐</div>
+        <div class="role-name">Mentor</div>
+        <div class="role-desc">Guiding and supporting peers and students in their development.</div>
+        <div class="role-status">
+          <span class="status-badge badge-emerging">Emerging</span>
+          <span class="add-icon">→</span>
+        </div>
+      </div>
+    </div>
+    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 1.5rem; text-align: right; font-style: italic;">Click any role card to jump to its reflection entry below.</p>
+  </div>
+</section>
+
+<!-- REFLECTIVE JOURNEY / TIMELINE -->
+<section id="journey" class="alt-bg">
+  <div class="container">
+    <div class="section-label">Reflective Practice</div>
+    <h2>My <em>Reflections</em></h2>
+    <p class="section-intro">Each entry below captures a moment of growth, challenge, or insight across the eight faculty roles. Artifacts, evidence, and narrative are added here as the journey unfolds.</p>
+    <div class="timeline">
+
+      <!-- Designer -->
+      <div class="timeline-entry" id="design-entry">
+        <div class="timeline-dot"></div>
+        <div class="entry-meta">
+          <span class="entry-date">2022 – Present</span>
+          <span class="entry-role-tag">Designer</span>
+          <span class="status-badge badge-performing" style="font-size:0.68rem;">Performing</span>
+        </div>
+        <div class="entry-title">Rebuilding BScN Science Courses with Open Educational Resources</div>
+        <div class="entry-body">[Add your reflective narrative here. Describe what you did, what you learned, and how it impacted students. For example: developing NURS 1016 Anatomy & Physiology 1 and NURS 1020 Anatomy & Physiology 2 from the ground up using OpenStax — the decisions made, challenges encountered, and feedback received. What would you do differently? What was a breakthrough moment?]</div>
+        <div class="artifact-chips">
+          <span class="chip">NURS 1016 Course Design</span>
+          <span class="chip">NURS 1020 Course Design</span>
+          <span class="chip">OpenStax OER Integration</span>
+          <span class="chip">Assessment Alignment</span>
+          <span class="chip add">+ Add Artifact</span>
+        </div>
+      </div>
+
+      <!-- Researcher -->
+      <div class="timeline-entry" id="researcher-entry">
+        <div class="timeline-dot"></div>
+        <div class="entry-meta">
+          <span class="entry-date">2021 – 2023</span>
+          <span class="entry-role-tag">Researcher</span>
+          <span class="status-badge badge-performing" style="font-size:0.68rem;">Performing</span>
+        </div>
+        <div class="entry-title">Virtual Reality in Anatomy: Researching Motivation &amp; Learning Gains</div>
+        <div class="entry-body">[Add your reflective narrative here. Describe your experience as Co-Investigator on the Future Skills Canada VR project. What did you set out to learn? What did the data reveal? How has this changed how you think about evidence and pedagogy? Reflect on what it means to be a researcher who also teaches, and how this scholarship informed your course design.]</div>
+        <div class="artifact-chips">
+          <span class="chip">CJLT Publication (2025)</span>
+          <span class="chip">FSC Grant — Co-Investigator</span>
+          <span class="chip">VR Educator Micro-credential</span>
+          <span class="chip add">+ Add Artifact</span>
+        </div>
+      </div>
+
+      <!-- Inclusive Practitioner -->
+      <div class="timeline-entry" id="inclusive-entry">
+        <div class="timeline-dot" style="background:#5c52bf; box-shadow: 0 0 0 2px #5c52bf;"></div>
+        <div class="entry-meta">
+          <span class="entry-date">Add Date</span>
+          <span class="entry-role-tag">Inclusive Practitioner</span>
+          <span class="status-badge badge-placeholder" style="font-size:0.68rem;">Awaiting Entry</span>
+        </div>
+        <div class="entry-title" style="color: var(--text-muted); font-style: italic;">Reflection Awaiting Entry</div>
+        <div class="entry-body placeholder">Reflect on an instance where inclusive practice impacted student experience. Consider: adapting learning materials to reflect the diversity of your student body; creating a personal land acknowledgement; implementing equity-based assessment methods; or embedding culturally responsive pedagogy in your nursing science courses.</div>
+        <div class="artifact-chips">
+          <span class="chip add">+ Add Artifact</span>
+        </div>
+      </div>
+
+      <!-- Changemaker -->
+      <div class="timeline-entry" id="changemaker-entry">
+        <div class="timeline-dot" style="background:#a03860; box-shadow: 0 0 0 2px #a03860;"></div>
+        <div class="entry-meta">
+          <span class="entry-date">2022 – Present</span>
+          <span class="entry-role-tag">Changemaker</span>
+          <span class="status-badge badge-emerging" style="font-size:0.68rem;">Emerging</span>
+        </div>
+        <div class="entry-title">Developing the BScN Curriculum: A Program-Level Transformation</div>
+        <div class="entry-body">[Add your reflective narrative here. Reflect on your role in developing the BScN curriculum — designing program learning outcomes, building course-based outcomes, and successfully obtaining CNO approval. What was the process like? What changemaking moments stand out? How has the program's launch in Fall 2022 confirmed or challenged your assumptions?]</div>
+        <div class="artifact-chips">
+          <span class="chip">BScN Curriculum Development</span>
+          <span class="chip">CNO Program Approval</span>
+          <span class="chip add">+ Add Artifact</span>
+        </div>
+      </div>
+
+      <!-- Digital Explorer -->
+      <div class="timeline-entry" id="digital-entry">
+        <div class="timeline-dot" style="background:#185fa5; box-shadow: 0 0 0 2px #185fa5;"></div>
+        <div class="entry-meta">
+          <span class="entry-date">2024 – Present</span>
+          <span class="entry-role-tag">Digital Explorer</span>
+          <span class="status-badge badge-transforming" style="font-size:0.68rem;">Transforming</span>
+        </div>
+        <div class="entry-title">Building a Custom NGN Question Platform in JavaScript</div>
+        <div class="entry-body">[Add your reflective narrative here. Reflect on developing a custom web-based platform for Next Generation NCLEX (NGN) questions. What motivated you to build this rather than use off-the-shelf tools? What did you learn — technically and pedagogically? How have students responded? How do you think about the ethics of custom digital tools in professional licensing preparation?]</div>
+        <div class="artifact-chips">
+          <span class="chip">NGN JavaScript Platform</span>
+          <span class="chip">NCLEX Preparation</span>
+          <span class="chip">VR Teaching (FSC Project)</span>
+          <span class="chip">Ontario Extend Micro-credentials</span>
+          <span class="chip add">+ Add Artifact</span>
+        </div>
+      </div>
+
+      <!-- Collaborator -->
+      <div class="timeline-entry" id="collaborator-entry">
+        <div class="timeline-dot" style="background:#3b6d11; box-shadow: 0 0 0 2px #3b6d11;"></div>
+        <div class="entry-meta">
+          <span class="entry-date">2023 – Present</span>
+          <span class="entry-role-tag">Collaborator</span>
+          <span class="status-badge badge-performing" style="font-size:0.68rem;">Performing</span>
+        </div>
+        <div class="entry-title">Leading Georgian's Research Ethics Board</div>
+        <div class="entry-body">[Add your reflective narrative here. Reflect on your role as Chair of the GCREB. How has this cross-college, cross-disciplinary role shaped your sense of collaboration? What has it taught you about navigating power, disagreement, and shared standards? How does your scientific research background inform your approach to ethical review of course-based research?]</div>
+        <div class="artifact-chips">
+          <span class="chip">GCREB Chair (2023–present)</span>
+          <span class="chip">TCPS2 CORE Training</span>
+          <span class="chip">Ethics Review Resources</span>
+          <span class="chip add">+ Add Artifact</span>
+        </div>
+      </div>
+
+      <!-- Reflector -->
+      <div class="timeline-entry" id="reflector-entry">
+        <div class="timeline-dot"></div>
+        <div class="entry-meta">
+          <span class="entry-date">Add Date</span>
+          <span class="entry-role-tag">Reflector</span>
+          <span class="status-badge badge-placeholder" style="font-size:0.68rem;">Awaiting Entry</span>
+        </div>
+        <div class="entry-title" style="color: var(--text-muted); font-style: italic;">Reflection Awaiting Entry</div>
+        <div class="entry-body placeholder">Reflect on an instance where integrating feedback changed your practice. Consider: adjusting Pathophysiology course materials based on student performance data; using course evaluations as a design tool; or a moment when student feedback surprised you and led to a breakthrough in your teaching approach.</div>
+        <div class="artifact-chips">
+          <span class="chip add">+ Add Artifact</span>
+        </div>
+      </div>
+
+      <!-- Mentor -->
+      <div class="timeline-entry" id="mentor-entry">
+        <div class="timeline-dot" style="background:#854f0b; box-shadow: 0 0 0 2px #854f0b;"></div>
+        <div class="entry-meta">
+          <span class="entry-date">Add Date</span>
+          <span class="entry-role-tag">Mentor</span>
+          <span class="status-badge badge-emerging" style="font-size:0.68rem;">Emerging</span>
+        </div>
+        <div class="entry-title" style="color: var(--text-muted); font-style: italic;">Reflection Awaiting Entry</div>
+        <div class="entry-body placeholder">Reflect on a mentoring experience — supporting a student through the rigour of nursing science, onboarding a new faculty colleague, or coaching a student navigating the bridge from foundational sciences to clinical practice. What does mentorship look like in a biomedical sciences context within a nursing program?</div>
+        <div class="artifact-chips">
+          <span class="chip add">+ Add Artifact</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SCHOLARSHIP -->
+<section id="scholarship">
+  <div class="container">
+    <div class="section-label">Scholarship</div>
+    <h2>Research &amp; <em>Teaching Scholarship</em></h2>
+    <p class="section-intro">My scholarship spans discovery research in chemistry and active investigation of technology-enhanced learning in nursing education. Below are selected works and ongoing scholarship activities.</p>
+
+    <h3 style="font-size:0.8rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-muted); margin-bottom:1rem; font-weight:500;">Scholarship of Teaching &amp; Learning</h3>
+    <ul class="pub-list">
+      <li class="pub-item">
+        <span class="pub-type">Journal Article</span>
+        <div>
+          <div class="pub-title">Student Motivation Using Virtual Reality in Human Anatomy and Physiology Courses</div>
+          <div class="pub-citation">Thadani, A., Deschamps, I., Doran, J., Forlani, C., Theriault, R., &amp; Madorin, S. (2025). Canadian Journal of Learning and Technology, 51(2), 1–21.</div>
+        </div>
+      </li>
+      <li class="pub-item">
+        <span class="pub-type">Platform Dev</span>
+        <div>
+          <div class="pub-title">Development of an Online Platform for Customized Next Generation NCLEX Questions</div>
+          <div class="pub-citation">Thadani, A. (2024). Web-based JavaScript platform delivering tailored NGN questions for A&amp;P and Pathophysiology courses in the BScN program.</div>
+        </div>
+      </li>
+      <li class="pub-item pub-placeholder">
+        <span class="pub-type" style="background:var(--mist); color:var(--text-muted); border-style:dashed;">Add Entry</span>
+        <div>
+          <div class="pub-title">[Add a future scholarship project, work-in-progress, conference presentation, or peer publication here]</div>
+        </div>
+      </li>
+    </ul>
+
+    <h3 style="font-size:0.8rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-muted); margin:2rem 0 1rem; font-weight:500;">Scholarship of Discovery — Selected Prior Work</h3>
+    <ul class="pub-list">
+      <li class="pub-item">
+        <span class="pub-type">US Patent</span>
+        <div>
+          <div class="pub-title">Methods of Performing Cycloadditions and Asymmetric Catalytic Reactions</div>
+          <div class="pub-citation">US Patent 7230125 — Rawal, V.H.; Huang, Y.; Unni, A.K.; Thadani, A.N.</div>
+        </div>
+      </li>
+      <li class="pub-item">
+        <span class="pub-type">US Patent</span>
+        <div>
+          <div class="pub-title">Methods of Preparing Tertiary Carbinamine Compounds</div>
+          <div class="pub-citation">US Patent 8143451 — Thadani, A.N.; Dhudshia, B.</div>
+        </div>
+      </li>
+      <li class="pub-item" style="border-style: dashed; background: var(--mist);">
+        <span class="pub-type" style="background:var(--mist); color:var(--text-muted); border-style:dashed;">Note</span>
+        <div>
+          <div class="pub-title" style="color:var(--text-muted); font-style:italic; font-weight:400;">Three additional US Patents available — see full CV for complete list.</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- GOALS / 3-YEAR PLAN -->
+<section id="goals" class="alt-bg">
+  <div class="container">
+    <div class="section-label">Three-Year Goal Plan</div>
+    <h2>Looking Back to <em>Look Forward</em></h2>
+    <p class="section-intro">Goal setting is central to the FFR process. Below I map my professional growth intentions across the three-year cycle, grounded in where I am and where I aspire to be.</p>
+    <div class="goals-grid">
+
+      <div class="goal-card active">
+        <div class="goal-year">Year 1 — Active</div>
+        <div class="goal-title">[Primary Goal: e.g. Deepen Inclusive Pedagogy in Nursing Sciences]</div>
+        <div class="goal-desc">[Describe your Year 1 goal here — be specific about the competency role, the action steps, and how you will know you've achieved it. Example: Redesign NURS 1017 Pathophysiology 1 to include case studies that represent culturally diverse patient populations and integrate EDIB considerations explicitly into learning activities.]</div>
+        <div class="progress-bar"><div class="progress-fill" style="width: 30%"></div></div>
+        <div class="progress-label"><span>In progress</span><span>30%</span></div>
+      </div>
+
+      <div class="goal-card active">
+        <div class="goal-year">Year 1 — Active</div>
+        <div class="goal-title">[Secondary Goal: e.g. Establish a Peer Observation &amp; Feedback Practice]</div>
+        <div class="goal-desc">[Describe your second Year 1 goal. Example: Participate in at least two peer observation cycles in the BScN program; provide and receive structured pedagogical feedback from a colleague using the Reflector and Collaborator competencies as the lens.]</div>
+        <div class="progress-bar"><div class="progress-fill" style="width: 15%"></div></div>
+        <div class="progress-label"><span>Early stage</span><span>15%</span></div>
+      </div>
+
+      <div class="goal-card planned">
+        <div class="goal-year planned">Year 2 — Planned</div>
+        <div class="goal-title placeholder">[Year 2 Goal — To Be Defined]</div>
+        <div class="goal-desc">[Year 2 goals will be refined based on Year 1 outcomes and evolving program needs. Consider: expanding the NGN platform to additional courses; pursuing a formal SoTL project; deepening mentorship of new faculty in the BScN program.]</div>
+      </div>
+
+      <div class="goal-card planned">
+        <div class="goal-year planned">Year 3 — Planned</div>
+        <div class="goal-title placeholder">[Year 3 Goal — To Be Defined]</div>
+        <div class="goal-desc">[Year 3 goals will reflect a full cycle of growth. Consider transformation-level contributions: publishing a SoTL paper from Year 1–2 work; presenting at an Ontario nursing education conference; leading a curriculum review committee.]</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROFESSIONAL DEVELOPMENT -->
+<section id="development">
+  <div class="container">
+    <div class="section-label">Professional Development</div>
+    <h2>Ongoing <em>Learning</em></h2>
+    <p class="section-intro">Professional development is a cornerstone of the Reflector and Researcher roles. Below are formal learning experiences that have shaped my practice.</p>
+    <div class="pd-grid">
+
+      <div class="pd-card">
+        <div class="pd-year">2023</div>
+        <div class="pd-name">Research Ethics — TCPS 2: CORE 2022</div>
+        <div class="pd-org">Panel of Research Ethics / Georgian College</div>
+      </div>
+      <div class="pd-card">
+        <div class="pd-year">2021</div>
+        <div class="pd-name">VR Educator Micro-credential</div>
+        <div class="pd-org">Georgian College</div>
+      </div>
+      <div class="pd-card">
+        <div class="pd-year">2020</div>
+        <div class="pd-name">Curator &amp; Technologist Micro-credentials</div>
+        <div class="pd-org">Ontario Extend</div>
+      </div>
+      <div class="pd-card">
+        <div class="pd-year">2017</div>
+        <div class="pd-name">Keystones of Healthcare Simulation Certificate</div>
+        <div class="pd-org">SIM-one, Healthcare Simulation Network</div>
+      </div>
+      <div class="pd-card">
+        <div class="pd-year">FRAME 2025</div>
+        <div class="pd-name">FRAME Kick-Off Session</div>
+        <div class="pd-org">Centre for Teaching &amp; Learning, Georgian College</div>
+      </div>
+      <div class="pd-card add-card">
+        <div class="plus">+</div>
+        Add Professional Development
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- EDIB -->
+<section id="edib" class="alt-bg">
+  <div class="container">
+    <div class="section-label">Equity, Diversity, Inclusion &amp; Belonging</div>
+    <h2>EDIB &amp; <em>Indigenous Ways of Knowing</em></h2>
+    <p class="section-intro">The FFR process asks each faculty member to reflect on how they have incorporated EDIB principles and Indigenous Ways of Knowing into their curriculum, assessment, and student engagement practices.</p>
+
+    <div class="edib-entry">
+      <span class="edib-tag">Curriculum &amp; Assessment</span>
+      <div class="edib-title">[Add an EDIB reflection related to curriculum or assessment design]</div>
+      <div class="edib-body">[Describe a specific instance where you made a deliberate EDIB-informed change to course content, case studies, or assessment design. For example: incorporating patient case studies that represent diverse populations in Pathophysiology; using equitable assessment methods that account for students' varied learning needs; or removing barriers in course design for students with disabilities. What prompted the change? What was the impact?]</div>
+    </div>
+
+    <div class="edib-entry">
+      <span class="edib-tag">Student Engagement</span>
+      <div class="edib-title">[Add an EDIB reflection related to student engagement and classroom culture]</div>
+      <div class="edib-body">[Reflect on a moment where you worked to create a more inclusive classroom environment. Consider: how you established class norms; how you responded to inappropriate assumptions; how you created space for students from equity-deserving groups to succeed in the rigorous science content of the BScN program.]</div>
+    </div>
+
+    <div class="edib-entry">
+      <span class="edib-tag">Indigenous Ways of Knowing</span>
+      <div class="edib-title">[Add a reflection on Indigenous Ways of Knowing in your teaching practice]</div>
+      <div class="edib-body">[Reflect on how you have engaged with, or aspire to engage with, Indigenous perspectives in a biomedical sciences context. Consider: your personal land acknowledgement practice; how Indigenous epistemologies relate to health and the body in your nursing science courses; professional development you have pursued (e.g. 4 Seasons of Reconciliation) and how it has changed your practice.]</div>
+    </div>
+
+    <div class="edib-entry placeholder">
+      <span class="edib-tag" style="background:var(--mist); color:var(--text-muted); border-style:dashed;">Add Entry</span>
+      <div class="edib-title" style="color:var(--text-muted); font-style:italic; font-weight:400;">Add another EDIB reflection</div>
+      <div class="edib-body" style="font-style:italic; color:rgba(107,127,143,0.6);">Click to add an additional equity, diversity, inclusion &amp; belonging reflection entry.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- RESEARCH ETHICS BOARD -->
+<section id="ethics-board">
+  <div class="container">
+    <div class="section-label">More · Research Ethics</div>
+    <h2>Research <em>Ethics Board</em></h2>
+    <div class="divider"></div>
+    <div style="background: var(--mist); border: 1px dashed rgba(107,127,143,0.3); border-radius: var(--radius); padding: 2.5rem; max-width: 760px;">
+      <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.8; font-style: italic;">[Add your reflections and contributions as Chair of the Georgian College Research Ethics Board here. Consider: your leadership approach; notable decisions or policy work; how chairing the GCREB has shaped your understanding of research integrity; the learning resources you developed for applicants; and how this role connects to your identity as a researcher-educator.]</p>
+      <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
+        <div style="font-size: 0.75rem; color: var(--teal); font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.5rem;">Key Roles</div>
+        <p style="font-size: 0.88rem; color: var(--slate);">Chair, GCREB — January 2023 – Present<br>Member, GCREB — September 2021 – December 2022</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM DEVELOPMENT -->
+<section id="program-dev" class="alt-bg">
+  <div class="container">
+    <div class="section-label">More · Program Development</div>
+    <h2>Program <em>Development</em></h2>
+    <div class="divider"></div>
+    <div style="background: var(--white); border: 1px dashed rgba(107,127,143,0.3); border-radius: var(--radius); padding: 2.5rem; max-width: 760px;">
+      <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.8; font-style: italic;">[Document your contributions to program development at Georgian College. This could include your role in building the BScN program from the ground up, developing program-level learning outcomes, working toward CNO approval, or contributing to program review and renewal processes. What was your vision for the program? What challenges did you navigate? What are you most proud of?]</p>
+    </div>
+  </div>
+</section>
+
+<!-- CURRICULUM DESIGN -->
+<section id="curriculum">
+  <div class="container">
+    <div class="section-label">More · Curriculum Design</div>
+    <h2>Curriculum <em>Design</em></h2>
+    <div class="divider"></div>
+    <div style="background: var(--mist); border: 1px dashed rgba(107,127,143,0.3); border-radius: var(--radius); padding: 2.5rem; max-width: 760px;">
+      <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.8; font-style: italic;">[Showcase your curriculum design work here — particularly the four nursing science courses you have developed or are redeveloping (NURS 1016, 1017, 1020, 1021, and 2020). Describe your design principles, your use of OER (OpenStax), your approach to aligning assessments with learning outcomes, and any innovations you've introduced. Include course syllabi, sample learning activities, or assessment rubrics as artifacts.]</p>
+    </div>
+  </div>
+</section>
+
+<!-- ACCREDITATION -->
+<section id="accreditation" class="alt-bg">
+  <div class="container">
+    <div class="section-label">More · Accreditation</div>
+    <h2>Accreditation <em>Work</em></h2>
+    <div class="divider"></div>
+    <div style="background: var(--white); border: 1px dashed rgba(107,127,143,0.3); border-radius: var(--radius); padding: 2.5rem; max-width: 760px;">
+      <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.8; font-style: italic;">[Document your contributions to accreditation and quality assurance processes. This may include CNO program approval work, curriculum mapping to professional competency standards, preparation of self-study documents, or participation in site visits. Reflect on what accreditation processes have taught you about program quality and accountability in professional nursing education.]</p>
+    </div>
+  </div>
+</section>
+
+<!-- COMMITTEE WORK -->
+<section id="committees">
+  <div class="container">
+    <div class="section-label">More · Committees</div>
+    <h2>Committee <em>Work</em></h2>
+    <div class="divider"></div>
+    <div style="background: var(--mist); border: 1px dashed rgba(107,127,143,0.3); border-radius: var(--radius); padding: 2.5rem; max-width: 760px;">
+      <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.8; font-style: italic;">[List and reflect on your committee contributions at Georgian College and beyond. Consider: program-level committees, school-level governance, cross-college initiatives, and any external committee or advisory roles. For each, describe your contribution and what you gained. Committee work is evidence of your Collaborator and Changemaker roles within the Faculty Competency Framework.]</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-name">Avinash Thadani, Ph.D.</div>
+  <div class="footer-divider"></div>
+  <div class="footer-sub">Faculty — BScN Nursing Program · Georgian College · Formative Faculty Reflection Portfolio</div>
+  <ul class="footer-links">
+    <li><a href="https://www.georgiancollege.ca/profile/avinash-thadani/" target="_blank">Georgian Profile</a></li>
+    <li><a href="https://www.georgiancollege.ca/ctlae/faculty-competencies/#roles" target="_blank">Competency Framework</a></li>
+    <li><a href="#top">Back to Top</a></li>
+  </ul>
+</footer>
+
+<script>
+/* Smooth scroll with fixed-nav offset for all internal anchor links */
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var id = this.getAttribute('href').slice(1);
+      var target = id === 'top' ? document.body : document.getElementById(id);
+      if (!target) return;
+      e.preventDefault();
+      var offset = id === 'top' ? 0 : target.getBoundingClientRect().top + window.pageYOffset - 68;
+      window.scrollTo({ top: offset, behavior: 'smooth' });
+    });
+  });
+});
+</script>
+
+</body>
+</html>
